@@ -1,0 +1,19 @@
+plugins {
+    id("java-platform")
+}
+
+group = "org.example.gradle"
+
+javaPlatform {
+    allowDependencies()
+}
+
+dependencies {
+    // BOMs
+    api(platform(libs.spring.boot.dependencies))
+
+    // further constraints
+    constraints {
+        api(libs.lombok)
+    }
+}

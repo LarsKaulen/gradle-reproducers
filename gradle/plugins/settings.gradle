@@ -1,0 +1,5 @@
+dependencyResolutionManagement {
+    includeBuild("../platform")
+}
+
+include("java-plugins")

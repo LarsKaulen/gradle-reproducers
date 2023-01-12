@@ -1,0 +1,17 @@
+plugins {
+    id("org.example.java")
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web")
+}
+
+testing {
+    suites {
+        test {
+            dependencies {
+                implementation("org.springframework.boot:spring-boot-starter-test")
+            }
+        }
+    }
+}

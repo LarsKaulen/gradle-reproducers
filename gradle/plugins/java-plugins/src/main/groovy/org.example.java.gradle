@@ -1,0 +1,24 @@
+plugins {
+    id("org.example.base")
+
+    id("java")
+    id("org.example.tests")
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(platform("org.example.gradle:platform"))
+    annotationProcessor(platform("org.example.gradle:platform"))
+
+    compileOnly(libs.lombok)
+    annotationProcessor(libs.lombok)
+}

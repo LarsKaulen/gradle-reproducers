@@ -1,1 +1,11 @@
+pluginManagement {
+    includeBuild("gradle/plugins")
+}
+
 rootProject.name = 'gradle-reproducers'
+
+dependencyResolutionManagement {
+    includeBuild("gradle/platform")
+}
+
+include("app")

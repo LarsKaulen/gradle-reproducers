@@ -1,0 +1,19 @@
+plugins {
+    id("java")
+}
+
+testing {
+    suites {
+        configureEach {
+            useJUnitJupiter()
+
+            dependencies {
+                implementation(project.dependencies.platform("org.example.gradle:platform"))
+                annotationProcessor(project.dependencies.platform("org.example.gradle:platform"))
+
+                compileOnly(libs.lombok)
+                annotationProcessor(libs.lombok)
+            }
+        }
+    }
+}

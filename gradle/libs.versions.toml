@@ -1,0 +1,8 @@
+[versions]
+lombok = "1.18.24"
+spring-boot = "3.0.1"
+
+[libraries]
+spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
+
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
